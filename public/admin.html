@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Admin</title><link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<div class="wrap">
+  <div id="loginBox" class="panel">
+    <h1>Portfolio Admin</h1>
+    <p>Sign in to manage your portfolio content.</p>
+    <form id="loginForm">
+      <input id="email" type="email" placeholder="Admin email" required>
+      <input id="password" type="password" placeholder="Password" required>
+      <button>Login</button>
+      <p id="loginStatus"></p>
+    </form>
+  </div>
+
+  <div id="dashboard" hidden>
+    <header class="top"><div><h1>Portfolio Dashboard</h1><p>Manage projects, skills and messages.</p></div><button id="logout">Logout</button></header>
+
+    <section class="panel">
+      <h2>Add Project</h2>
+      <form id="projectForm" class="grid">
+        <input name="title" placeholder="Project title" required>
+        <input name="technologies" placeholder="Technologies (comma separated)">
+        <input name="githubURL" placeholder="GitHub URL">
+        <input name="liveURL" placeholder="Live demo URL">
+        <input name="date" placeholder="Date">
+        <label><input type="checkbox" name="featured"> Featured</label>
+        <textarea name="description" placeholder="Project description" required></textarea>
+        <textarea name="features" placeholder="Features (one per line)"></textarea>
+        <button>Add Project</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Add Skill</h2>
+      <form id="skillForm" class="grid">
+        <input name="category" placeholder="Category e.g. Programming" required>
+        <input name="name" placeholder="Skill e.g. Java" required>
+        <input name="level" placeholder="Level">
+        <button>Add Skill</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Messages</h2>
+      <button id="loadMessages">Load Messages</button>
+      <div id="messages"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Projects</h2>
+      <div id="adminProjects"></div>
+    </section>
+  </div>
+</div>
+<script src="/js/admin.js"></script>
+</body>
+</html>
